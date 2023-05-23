@@ -5,7 +5,7 @@ import Detail from './component/datail/Detail';
 import LandingPage from './component/landingPage/LandingPage';
 import ActivitisCreate from './component/activitis/activityCreation/ActivitisCreate';
 import ActivityList from './component/activitis/activityList/ActivityList';
-
+// nuevo
 function App() {
   return (
 
