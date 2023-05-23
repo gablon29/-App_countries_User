@@ -6,6 +6,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/store'
+import axios from 'axios';
+
+// axios.defaults.baseURL = 'http://localhost:3001';
+axios.defaults.baseURL = 'appcountriesback-production.up.railway.app';
 
 ReactDOM.render(
   <React.StrictMode>
