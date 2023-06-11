@@ -13,7 +13,7 @@ import {
 
 export const getCountries = () => async (dispatch) => {
     try {
-        const response = await axios.get('http://localhost:3001/countries')
+        const response = await axios.get('https://appcountriesback-production.up.railway.app/')
         return dispatch({
             type: GET_COUNTRIES,
             payload: response.data
@@ -27,7 +27,7 @@ export const getCountries = () => async (dispatch) => {
 
 export const searchCountries = (stateSearch) => async (dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/countries/name?name=${stateSearch}`);
+        const response = await axios.get(`https://appcountriesback-production.up.railway.app/countries/name?name=${stateSearch}`);
         return dispatch({
             type: SEARCH_COUNTRIES,
             payload: response.data
@@ -42,7 +42,7 @@ export const searchCountries = (stateSearch) => async (dispatch) => {
 
 export const getDetail = (id) => async (dispatch) => {
     try {
-        const response = await axios.get(`http://localhost:3001/countries/${id}`)
+        const response = await axios.get(`https://appcountriesback-production.up.railway.app/countries/${id}`)
         return dispatch({
             type: DETAIL,
             payload: response.data
@@ -84,7 +84,7 @@ export const orderByPopulation = (payload) => {
 
 export const getActivities = () => async (dispatch) => {
     try {
-        let response = await axios.get("http://localhost:3001/activity");
+        let response = await axios.get("https://appcountriesback-production.up.railway.app/activity");
         return dispatch({
             type: GET_ACTIVITIES,
             payload: response.data
@@ -99,7 +99,7 @@ export const getActivities = () => async (dispatch) => {
 
 export const postActivities = (payload) => async (dispatch) => {
     try {
-        await axios.post('http://localhost:3001/activity', payload);
+        await axios.post('https://appcountriesback-production.up.railway.app/activity', payload);
         return dispatch({
             type: POST_ACTIVITIES,
         });
